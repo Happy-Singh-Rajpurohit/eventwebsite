@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Vida - Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #310a0a);
+            color: #fff;
+            text-align: left;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("bb3.jpg") center/cover no-repeat;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .container {
+            width: 50%;
+            /* margin: 0px 0; */
+            margin-top: 70px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            /* border-radius: 10px; */
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .rulebook {
+            width: 100%;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .qr-code {
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .qr-code img {
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .qr-code img:hover {
+            transform: scale(1.1);
+        }
+
+        .link a, .btn {
+            display: inline-block;
+            background: rgba(255, 255, 0, 0.6);
+            color: black;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover, .link a:hover {
+            transform: scale(1.1);
+            background-color: yellow;
+            box-shadow: 0 0 15px black;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            /* margin-top: 40px; */
+            text-align: center;
+        }
+
+        .social a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5em;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Colloquium Logo" height="50px">
+        <nav>
+            <a href="#rulebook">Rulebook</a>
+            <a href="#trivia">Trivia</a>
+            <a href="#github">GitHub</a>
+            <a href="#submit">Submit</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="image-container">
+                <img src="WEBVIDA.png" alt="Event Image">
+            </div>
+        </div>
+
+        <section id="rulebook" class="rulebook">
+            <h2>Rulebook</h2>
+            <p>1. Scan the first QR code to access the quiz platform.</p>
+            <p>2. Complete the quiz to qualify for the bidding round.</p>
+            <p>3. Scan the second QR code to access the Domain Selection Website.</p>
+            <p>4. Scan the QR for GitHub Code Template.</p>
+            <p>5. Scan the QR to Submit Your Project.</p>
+        </section>
+
+        <div id="github" class="qr-code">
+            <h2>Scan to Access GitHub Template</h2>
+            <img src="colqr.png" alt="GitHub QR Code">
+        </div>
+        <div class="link">
+            <!-- <a href="https://github.com">GitHub Template</a> -->
+        </div>
+
+        <div id="submit" class="qr-code">
+            <h2>Scan to Submit Your Project</h2>
+            <img src="colqr.png" alt="Submission QR Code">
+        </div>
+        <div class="link">
+            <!-- <a href="#">Submit Project</a> -->
+        </div>
+    </div>
+
+    <footer>
+        <h4>Contact Us</h4>
+        <div class="social">
+            <a href="https://www.instagram.com/iste_tiet/">Instagram</a>
+            <a href="https://www.linkedin.com/company/iste-thapar/posts/?feedView=all">LinkedIn</a>
+            <a href="https://www.facebook.com/ISTE.Thapar/">Facebook</a>
+        </div>
+        <p>© COLLOQUIUM 2025 | Designed With ❤️ by <span>Team ISTE</span></p>
+    </footer>
+</body>
+</html>
