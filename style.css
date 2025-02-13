@@ -198,10 +198,10 @@ body::before {
 }
 
 
-@keyframes glow2 {
+/* @keyframes glow2 {
     0% { box-shadow: 0 0 5px yellow; }
     100% { box-shadow: 0 0 10px rgb(0, 253, 0); }
-}
+} */
 
 @keyframes borderGlow {
     0% { border-color: yellow; box-shadow: 0 0 10px yellow; }
@@ -217,10 +217,10 @@ body::before {
     padding: 30px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 0px 10px rgb(0, 70, 0);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.578);
     animation: fadeIn 1s ease-in-out;
     margin-bottom: 30px;
-    animation: glow2 3s infinite alternate;
+    /* animation: glow2 3s infinite alternate; */
 }
 
 .rulebook h2 {
@@ -271,7 +271,7 @@ body::before {
 
 .qr-code:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgb(0, 70, 0);
+    box-shadow: 0 0 15px black;
 }
 
 .qr-code img {
