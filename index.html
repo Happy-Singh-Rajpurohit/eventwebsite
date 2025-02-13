@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Vida - Event</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="https://colloquium11.vercel.app/">
+                    <img src="logo.png" alt="Colloquium Logo" height="50px">
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#rulebook">Rulebook</a>
+                <a href="#trivia">Trivia</a>
+                <a href="#github">GitHub</a>
+                <a href="https://your-submit-website.com">
+                    <button class="submit-btn">Submit</button>
+                </a>
+
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+
+    </header>
+
+    <div class="container">
+
+        <!-- WEB VIDA IMAGE -->
+        <div class="image-container">
+            <img src="WEBVIDA.png" alt="Event Image">
+        </div>
+
+        <!-- RULEBOOK -->
+        <section id="rulebook" class="rulebook">
+            <h2>Rulebook</h2>
+            <h3>Round 1:</h3>
+            <ul>
+                <li>It will be a trivia round on web development-related topics.</li>
+                <li>A QR code will be displayed initially, redirecting participants to a website containing questions.
+                </li>
+                <li>After completing the trivia round, a leaderboard will be displayed showcasing the points earned.
+                </li>
+            </ul>
+            <h3>Round 2:</h3>
+            <ul>
+                <li>Teams will then participate to bid their favorable website domain for website building using the
+                    points earned in the previous round.
+                </li>
+                <li>Following, a QR code will be displayed, redirecting to a GitHub repository containing a basic code
+                    template.
+                </li>
+                <li>Teams will be challenged with commands that require them to implement specific features into their
+                    website (if completed, extra points will be given).
+                </li>
+                <li>The Website building round will then continue for 45 minutes, after which the teams are required to
+                    submit their source file.
+                </li>
+                <li>Teams will be judged on creativity, uniqueness and functionality of the website.
+                </li>
+                <li>All participants must bring their laptops fully charged with a stable internet connection.
+                </li>
+                <li>The Organizing Committee reserves the right to disqualify teams found using unfair means, with the
+                    decision being final.</li>
+            </ul>
+        </section>
+
+        <!-- QR SECTION -->
+        <div class="qr-container">
+            <div id="github" class="qr-code">
+                <h2>Scan for GitHub Template</h2>
+                <img src="QR.png" alt="GitHub QR Code">
+            </div>
+
+            <div id="submit" class="qr-code">
+                <h2>Scan to Submit Website</h2>
+                <img src="QR2.png" alt="Submission QR Code">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h4>Contact Us:</h4>
+        <div class="social">
+            <a href="#"><i class="icon ion-social-instagram"></i></a>
+            <a href="#"><i class="icon ion-social-linkedin"></i></a>
+            <a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <p>© COLLOQUIUM 2025 | Designed With ❤️ by Team ISTE</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav-links");
+            const hamburger = document.querySelector(".hamburger i");
+
+            nav.classList.toggle("nav-active");
+
+            if (nav.classList.contains("nav-active")) {
+                nav.style.maxHeight = nav.scrollHeight + "px";
+                hamburger.classList.remove("fa-bars");
+                hamburger.classList.add("fa-times"); // Change to 'X' icon
+            } else {
+                nav.style.maxHeight = "0";
+                hamburger.classList.remove("fa-times");
+                hamburger.classList.add("fa-bars"); // Change back to 'menu' icon
+            }
+        }
+    </script>
+
+</body>
+
+</html>

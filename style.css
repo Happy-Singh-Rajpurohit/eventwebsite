@@ -1,0 +1,315 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #310a0a);
+    color: #fff;
+    text-align: left;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bb3.jpg") center/cover no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* HEADER */
+
+
+/* NAVBAR STYLES */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 5px 10px rgb(0, 70, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    gap: 30px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* NAV LINKS STYLING */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    /* Ensures text is centered inside */
+    height: 100%;
+    /* Ensures it takes full navbar height */
+}
+
+.submit-btn {
+    background-color: yellow;
+    color: black;
+    padding: 8px 15px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: rgb(5, 166, 5);
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Cool Hover Animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: yellow;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: rgb(5, 166, 5);
+    transform: scale(1.1);
+}
+
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+}
+
+.hamburger:hover {
+    transform: scale(1.2);
+}
+
+/* MOBILE RESPONSIVE NAV */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: rgba(0, 0, 0, 0.95);
+        width: 200px;
+        padding: 0;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 255, 4, 0.3);
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .nav-active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MAIN CONTENT */
+.container {
+    padding: 100px 5% 50px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+/* WEB VIDA IMAGE */
+.image-container {
+    /* text-align: center; */
+    margin: 50px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.image-container img {
+    width: 40%;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.3); */
+}
+
+/* RULEBOOK */
+.rulebook {
+    width: 50%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 10px rgb(0, 70, 0);
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.rulebook h2 {
+    color: yellow;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-decoration: yellow underline;
+}
+
+.rulebook h3 {
+    color: yellow;
+    text-decoration: underline;
+    margin: 15px 0;
+}
+
+.rulebook ul {
+    padding-left: 20px;
+}
+
+.rulebook ul li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rulebook ul li:hover {
+    transform: translateX(10px);
+    color: yellow;
+}
+
+/* QR SECTION */
+.qr-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.qr-code {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.qr-code:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(0, 70, 0);
+}
+
+.qr-code img {
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.qr-code img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h4 {
+    text-decoration: underline;
+}
+
+.social a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 15px 8px;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.social p {
+    margin: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .image-container img {
+        width: 100%;
+    }
+
+    .rulebook {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .qr-container {
+        flex-direction: column;
+    }
+
+    .qr-code {
+        width: 100%;
+    }
+}
