@@ -257,7 +257,7 @@ body::before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
     width: 50%;
 }
 
@@ -265,7 +265,7 @@ body::before {
     flex: 1;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     animation: glow2 3s infinite alternate;
@@ -277,6 +277,7 @@ body::before {
 }
 
 .qr-code img {
+    margin-top: 20px;
     width: 200px;
     transition: transform 0.3s;
 }
