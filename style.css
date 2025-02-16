@@ -238,16 +238,27 @@ body::before {
     margin: 15px 0;
 }
 
-.rulebook ul {
+.rulebook ol {
     padding-left: 20px;
 }
 
-.rulebook ul li {
+.rulebook ol li {
     margin-bottom: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
-.rulebook ul li:hover {
+.rulebook ol li:hover {
+    transform: translateX(10px);
+    color: yellow;
+}
+
+.rulebook p{
+    margin: 10px 0;
+    /* padding-left: 5px; */
+    transition: transform 0.3s ease-in-out;
+}
+
+.rulebook p:hover {
     transform: translateX(10px);
     color: yellow;
 }
